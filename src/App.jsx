@@ -1,5 +1,9 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import shop from './pages/shop'
+import cart from './pages/cart'
 
 function App() {
  
@@ -9,13 +13,11 @@ function App() {
      <Router>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Shop/>} />
-        <Route path="/cart" element={<Cart/>} />
+        <Route path="/" element={<shop/>} />
+        <Route path="/cart" element={<cart/>} />
       </Routes>
      </Router>
-     <footer className="w-full text-center p-4 bg-gray-800 text-white">
-        <p>© 2023 My App</p>
-      </footer>
+      <Footer/>
     </>
   )
 }
