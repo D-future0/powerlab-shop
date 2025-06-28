@@ -2,8 +2,8 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import shop from './pages/shop'
-import cart from './pages/cart'
+import Shop from './pages/shop'
+import Cart from './pages/cart'
 
 function App() {
  
@@ -13,8 +13,8 @@ function App() {
      <Router>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<shop/>} />
-        <Route path="/cart" element={<cart/>} />
+        <Route path="/" element={<Shop/>} />
+        <Route path="/cart" element={<Cart/>} />
       </Routes>
      </Router>
       <Footer/>
