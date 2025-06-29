@@ -1,3 +1,6 @@
+// This component displays an alert message with a specific type (success or error).
+// It uses Tailwind CSS classes to style the alert box with appropriate colors and padding.
+
 export default function Alert({ type = "success", message }) {
   const bgColor = type === "success" ? "bg-green-100" : "bg-red-100";
   const textColor = type === "success" ? "text-green-800" : "text-red-800";
@@ -14,5 +17,4 @@ export default function Alert({ type = "success", message }) {
   );
 }
 
-// This component displays an alert message with a specific type (success or error).
-// It uses Tailwind CSS classes to style the alert box with appropriate colors and padding.
+

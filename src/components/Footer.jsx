@@ -1,4 +1,5 @@
 import React from 'react'
+// This is the Footer component that displays the developer's name and copyright information.
 
 const Footer = () => {
   return (

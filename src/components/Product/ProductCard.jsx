@@ -1,4 +1,6 @@
 import { useCart } from '../../context/CartContext'
+// This component renders a single product card.
+// It displays the product image, name, description, price, and an "Add to Cart" button.
 
 export default function ProductCard({ product }) {
   const { addToCart } = useCart()
@@ -21,5 +23,3 @@ export default function ProductCard({ product }) {
   )
 }
 
-// This component renders a single product card.
-// It displays the product image, name, description, price, and an "Add to Cart" button.

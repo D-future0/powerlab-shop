@@ -1,6 +1,8 @@
 import { useCart } from '../context/CartContext'
 import { useState } from 'react'
 import Alert from '../components/Alert';
+// This is the CartPage component that displays the user's cart items, allows quantity adjustments, coupon application, and shows totals.
+// It uses the useCart context to access cart functionality and state.
 
 export default function CartPage() {
   const {
@@ -24,7 +26,7 @@ export default function CartPage() {
     const { alert } = useCart()
 
   return (
-    <div className="p-4 h-screen">
+    <div className="p-4 min-h-screen">
       <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
 {alert && <Alert type={alert.type} message={alert.message} />}
       {cartItems.length === 0 ? (

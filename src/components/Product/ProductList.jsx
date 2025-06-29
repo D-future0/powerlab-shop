@@ -1,6 +1,8 @@
 import { products } from '../../products'
 import ProductCard from './ProductCard'
 // This component renders a list of products using the ProductCard component.
+// It maps through the products array imported from products.json and displays each product card.
+
 function ProductList() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -14,5 +16,3 @@ function ProductList() {
   )
 }
 export default ProductList
-// This component renders a list of products using the ProductCard component.
-// It maps through the products array imported from products.json and displays each product card.

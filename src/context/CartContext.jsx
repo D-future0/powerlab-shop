@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 
 const CartContext = createContext()
-
+// This context provides cart functionality including adding/removing items, applying coupons, and calculating totals.
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([])
   const [alert, setAlert] = useState(null)

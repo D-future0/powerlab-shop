@@ -1,6 +1,8 @@
 import { FaShoppingCart, FaHome, FaStore } from 'react-icons/fa';
 import {Link} from 'react-router-dom';
 import { useCart } from '../context/CartContext'
+// This is the Navbar component that displays the logo, store link, and cart icon with item count.
+// It uses the useCart context to access the total number of items in the cart.
 
 const Navbar = () => {
     const { totalItems } = useCart()
