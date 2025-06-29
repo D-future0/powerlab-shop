@@ -48,9 +48,10 @@ export default function CartPage() {
                   <p className="font-bold text-blue-600">
                     ${(item.price * item.quantity).toFixed(2)}
                   </p>
+                  <p className="text-sm text-gray-700 mt-2">Quantity: <span className="font-semibold">{item.quantity}</span></p>
                   <div
                     onClick={() => removeFromCart(item.id)}
-                    className="text-red-500 text-sm mt-8 cursor-pointer hover:underline"
+                    className="text-red-500 text-sm mt-2 cursor-pointer hover:underline"
                   >
                     Remove
                   </div>
@@ -60,7 +61,8 @@ export default function CartPage() {
           </ul>
 
           {/* Coupon Section */}
-          <form onSubmit={handleApply} className="mt-6">
+          <div className='flex flex-col items-center w-full'>
+          <form onSubmit={handleApply} className="mt-6 w-full sm:max-w-xl">
             <label className="block text-sm font-medium mb-1">Coupon Code:</label>
             <div className="flex space-x-2">
               <input
@@ -83,6 +85,7 @@ export default function CartPage() {
               <p className="text-green-600 text-sm mt-1">{coupon} applied</p>
             )}
           </form>
+          </div>
 
           {/* Totals */}
           <div className="mt-6 text-right space-y-2">

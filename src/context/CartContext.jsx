@@ -31,7 +31,7 @@ const validCouponCode = /^POWERLABSx$/
   const addToCart = (product) => {
     const existing = cartItems.find(item => item.id === product.id)
     if (existing) {
-      // Increase quantity
+      // Increase quantity if item already exists
       setCartItems(cartItems.map(item =>
         item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
       ))
@@ -41,18 +41,21 @@ const validCouponCode = /^POWERLABSx$/
       showAlert('success', 'Item added to cart!')
     }
   }
-
+// Remove item from cart
+  // This function removes an item from the cart by filtering it out based on its id.
   const removeFromCart = (id) => {
     setCartItems(cartItems.filter(item => item.id !== id))
     showAlert('error', 'Item removed from cart')
   }
-
+// Increase item quantity
+  // This function increases the quantity of a specific item in the cart by its id.
   const increaseQty = (id) => {
     setCartItems(cartItems.map(item =>
       item.id === id ? { ...item, quantity: item.quantity + 1 } : item
     ))
   }
-
+// Decrease item quantity
+  // This function decreases the quantity of a specific item in the cart by its id.
   const decreaseQty = (id) => {
     setCartItems(cartItems.map(item =>
       item.id === id

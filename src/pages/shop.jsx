@@ -7,7 +7,7 @@ import Alert from '../components/Alert';
 const Shop = () => {
     const { alert } = useCart()
   return (
-    <div>
+    <div className="flex flex-col h-screen ">
       {alert && <Alert type={alert.type} message={alert.message} />}
       <ProductList />
     </div>

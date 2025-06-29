@@ -3,7 +3,7 @@ export default function Alert({ type = 'success', message }) {
   const textColor = type === 'success' ? 'text-green-800' : 'text-red-800'
 
   return (
-    <div className={`${bgColor} ${textColor} px-4 py-2 rounded-md shadow-sm mb-4`}>
+    <div className={`${bgColor} ${textColor} fixed px-4 py-2 rounded-md shadow-sm mb-4`}>
       {message}
     </div>
   )
