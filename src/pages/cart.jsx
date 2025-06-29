@@ -22,7 +22,7 @@ export default function CartPage() {
   }
 
   return (
-    <div className="p-4">
+    <div className="p-4 h-screen">
       <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
 
       {cartItems.length === 0 ? (
@@ -35,12 +35,12 @@ export default function CartPage() {
                 <div className="flex items-center space-x-4">
                   <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded" />
                   <div>
-                    <h3 className="font-bold">{item.name}</h3>
-                    <p className="text-sm text-gray-500">${item.price.toFixed(2)}</p>
+                    <h3 className="font-bold text-gray-700">{item.name}</h3>
+                    <p className="text-left text-sm text-gray-500">${item.price.toFixed(2)}</p>
                     <div className="flex items-center space-x-2 mt-1">
-                      <button onClick={() => decreaseQty(item.id)} className="px-2 bg-gray-200 rounded">-</button>
+                      <div onClick={() => decreaseQty(item.id)} className="px-2 bg-gray-200 text-gray-700 cursor-pointer font-bold rounded">-</div>
                       <span>{item.quantity}</span>
-                      <button onClick={() => increaseQty(item.id)} className="px-2 bg-gray-200 rounded">+</button>
+                      <div onClick={() => increaseQty(item.id)} className="px-2 bg-gray-200 text-gray-700 cursor-pointer font-bold rounded">+</div>
                     </div>
                   </div>
                 </div>
@@ -48,12 +48,12 @@ export default function CartPage() {
                   <p className="font-bold text-blue-600">
                     ${(item.price * item.quantity).toFixed(2)}
                   </p>
-                  <button
+                  <div
                     onClick={() => removeFromCart(item.id)}
-                    className="text-red-500 text-sm mt-2 hover:underline"
+                    className="text-red-500 text-sm mt-8 cursor-pointer hover:underline"
                   >
                     Remove
-                  </button>
+                  </div>
                 </div>
               </li>
             ))}
