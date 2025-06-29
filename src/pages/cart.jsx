@@ -1,5 +1,6 @@
 import { useCart } from '../context/CartContext'
 import { useState } from 'react'
+import Alert from '../components/Alert';
 
 export default function CartPage() {
   const {
@@ -20,11 +21,12 @@ export default function CartPage() {
     e.preventDefault()
     applyCoupon(inputCode.trim())
   }
+    const { alert } = useCart()
 
   return (
     <div className="p-4 h-screen">
       <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
-
+{alert && <Alert type={alert.type} message={alert.message} />}
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
