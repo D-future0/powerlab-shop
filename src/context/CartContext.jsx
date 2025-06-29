@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 const CartContext = createContext();
-// This context provides cart functionality including adding/removing items, applying coupons, and calculating totals.
+// This context provides cart functionality including adding/removing items, saving/reloading from localStorage applying coupons, and calculating totals.
 export function CartProvider({ children }) {
   const [alert, setAlert] = useState(null);
   const [coupon, setCoupon] = useState("");
